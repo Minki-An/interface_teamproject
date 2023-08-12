@@ -28,7 +28,7 @@ data "terraform_remote_state" "terraform_state" {
 
 
 data "aws_kms_key" "dms_key" {
-  key_id = "arn:aws:kms:ap-northeast-2:686167268975:key/81165b80-8fa0-4bac-a7dc-0f7e5275ad5a"
+  key_id = ""
 } #본인 kms aws/dms 키로 교체
 
 #iam_role for RDS_Proxy: rds proxy 생성할 iam 역할 데이터 소스로 불러오기
@@ -37,8 +37,8 @@ data "aws_iam_role" "RDS_Proxy_iam" {
 }
 
 data "aws_secretsmanager_secret_version" "rds_secret" { 
-  #arn:aws:secretsmanager:ap-northeast-2:686167268975:secret:Terraform/RDS-fVZ5EX->rds 시크릿정보(사용자명,비번) 시크릿매니저로 관리
-  secret_id = "arn:aws:secretsmanager:ap-northeast-2:686167268975:secret:Terraform/RDS-fVZ5EX"
+  
+  secret_id = ""
 }
 
 # Seoul Region Aurora Cluster Subnet group: 오로라 클러스터 서브넷 그룹 생성
