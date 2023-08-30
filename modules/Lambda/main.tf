@@ -71,7 +71,7 @@ resource "aws_lambda_function" "lambada_for_slack" {
   source_code_hash = filebase64sha256("lambdfunction.zip")
   environment {
     variables = {
-      webhook = "https://hooks.slack.com/services/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"
+      webhook = "#WEBHOOK URL"
     }
   }  
 }
